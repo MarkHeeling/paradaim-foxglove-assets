@@ -482,4 +482,55 @@
     <parent link="flange"/>
     <child link="tool0"/>
   </joint>
+  <!-- Robotiq Hand-E (alleen in deze Foxglove-variant; meshes komen uit de
+       stage-export scripts/export_cel_glb.py, tool0-lokaal, en staan in het
+       publieke asset-repo naast deze URDF). De vingers zijn prismatic joints
+       met de Slider-namen van /joint_states; positie q verschuift de vinger
+       teken*q langs tool0-x (grotere q = verder open, pads raken elkaar op
+       de physics-ondergrens q=0.0096). De 3D-layer kan ze via "Joint states"
+       (topic /joint_states) of via "Transforms" (frames vinger_min/_plus op
+       /tf) laten meebewegen. -->
+  <link name="hand_e">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="../cel/hand_e.glb"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="tool0-hand_e" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="tool0"/>
+    <child link="hand_e"/>
+  </joint>
+  <link name="vinger_min">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="../cel/hand_e_vinger_min.glb"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="Slider_1" type="prismatic">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="tool0"/>
+    <child link="vinger_min"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="60.0" lower="0.0" upper="0.025" velocity="0.15"/>
+  </joint>
+  <link name="vinger_plus">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="../cel/hand_e_vinger_plus.glb"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="Slider_2" type="prismatic">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="tool0"/>
+    <child link="vinger_plus"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="60.0" lower="0.0" upper="0.025" velocity="0.15"/>
+  </joint>
 </robot>
