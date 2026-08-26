@@ -494,7 +494,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="../cel/hand_e.glb"/>
+        <mesh filename="../cel/hand_e.glb?v=7"/>
       </geometry>
     </visual>
   </link>
@@ -507,7 +507,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="../cel/hand_e_vinger_min.glb"/>
+        <mesh filename="../cel/hand_e_vinger_min.glb?v=7"/>
       </geometry>
     </visual>
   </link>
@@ -522,7 +522,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="../cel/hand_e_vinger_plus.glb"/>
+        <mesh filename="../cel/hand_e_vinger_plus.glb?v=7"/>
       </geometry>
     </visual>
   </link>
