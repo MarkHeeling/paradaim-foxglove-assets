@@ -14,3 +14,5 @@ De mesh-paden in die URDF zijn relatief en laden automatisch mee.
 De UR5e-meshes komen uit `ur_description` van Universal Robots
 (ros-industrial/universal_robot, BSD-3-Clause); de Hand-E-gripper zit
 niet in de URDF.
+
+**Bedieningspaneel:** download `panel/paradaim.paradaim-panel-1.0.0.foxe`, open het met de Foxglove-app (dubbelklik) en voeg het panel "Paradaim Bediening" toe aan je layout.
