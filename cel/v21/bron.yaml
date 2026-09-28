@@ -54,5 +54,10 @@ productnamen:
   "cobot base plate": basisplaat
   "camera stayout": camera_stayout
   "bracket": bracket
+# Onderdelen die als stapel dozen per hoogteniveau de cel in gaan in plaats
+# van als één bounding box; waarde = rasterafstand van de verticale lijnen
+# (mm). De basisplaat: plaat 20 mm (top 0,770) plus vier noppen tot 0,790.
+opsplitsen_op_hoogte:
+  "cobot base plate": 2.5
 pointcloud_producten: [cobot base plate, bracket]
 keepout_producten: [cobot base plate, bracket]

@@ -187,6 +187,58 @@ obstakels:
     - 0.555
     z:
     - 0.75
+    - 0.77
+    bron: cad
+    pointcloud: true
+    plaatsing_keepout: true
+  cad_basisplaat_02:
+    x:
+    - -0.08625
+    - -0.06375
+    y:
+    - 0.36375
+    - 0.38625
+    z:
+    - 0.77
+    - 0.79
+    bron: cad
+    pointcloud: true
+    plaatsing_keepout: true
+  cad_basisplaat_03:
+    x:
+    - -0.03625
+    - -0.01375
+    y:
+    - 0.26375
+    - 0.28625
+    z:
+    - 0.77
+    - 0.79
+    bron: cad
+    pointcloud: true
+    plaatsing_keepout: true
+  cad_basisplaat_04:
+    x:
+    - 0.01375
+    - 0.03625
+    y:
+    - 0.26375
+    - 0.28625
+    z:
+    - 0.77
+    - 0.79
+    bron: cad
+    pointcloud: true
+    plaatsing_keepout: true
+  cad_basisplaat_05:
+    x:
+    - 0.06375
+    - 0.08625
+    y:
+    - 0.36375
+    - 0.38625
+    z:
+    - 0.77
     - 0.79
     bron: cad
     pointcloud: true
