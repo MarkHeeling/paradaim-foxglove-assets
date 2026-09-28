@@ -74,21 +74,177 @@ obstakels:
     - 0.73
     - 2.05
     bron: virtueel
+  parkeerplek:
+    x:
+    - -0.54
+    - 0.2
+    y:
+    - 0.2
+    - 0.36
+    z:
+    - 0.75
+    - 1.52938
+    bron: virtueel
+    plaatsing_keepout: true
+    in_wereld: false
   cad_frame_01:
     x:
-    - 0.467163
-    - 0.563163
+    - -0.560319
+    - 0.559681
     y:
-    - 0.360985
-    - 0.399985
+    - 0.36
+    - 0.4
     z:
-    - 1.647677
-    - 1.743677
+    - 1.930019
+    - 1.970019
     bron: cad
     pointcloud: false
     plaatsing_keepout: false
   cad_frame_02:
     x:
+    - -0.029375
+    - 0.021425
+    y:
+    - 0.362721
+    - 0.367471
+    z:
+    - 1.978005
+    - 1.982755
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_03:
+    x:
+    - 0.370625
+    - 0.421425
+    y:
+    - 0.340673
+    - 0.369947
+    z:
+    - 1.975528
+    - 1.990924
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_04:
+    x:
+    - -0.429375
+    - -0.378575
+    y:
+    - 0.360244
+    - 0.390496
+    z:
+    - 1.975528
+    - 1.985231
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_05:
+    x:
+    - -0.029375
+    - 0.021425
+    y:
+    - 0.340673
+    - 0.369947
+    z:
+    - 1.975528
+    - 1.990924
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_06:
+    x:
+    - 0.370625
+    - 0.421425
+    y:
+    - 0.360244
+    - 0.390496
+    z:
+    - 1.975528
+    - 1.985231
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_07:
+    x:
+    - 0.370625
+    - 0.421425
+    y:
+    - 0.362721
+    - 0.367471
+    z:
+    - 1.978005
+    - 1.982755
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_08:
+    x:
+    - -0.029375
+    - 0.021425
+    y:
+    - 0.360244
+    - 0.390496
+    z:
+    - 1.975528
+    - 1.985231
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_09:
+    x:
+    - -0.429375
+    - -0.378575
+    y:
+    - 0.340673
+    - 0.369947
+    z:
+    - 1.975528
+    - 1.990924
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_10:
+    x:
+    - -0.429375
+    - -0.378575
+    y:
+    - 0.362721
+    - 0.367471
+    z:
+    - 1.978005
+    - 1.982755
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_11:
+    x:
+    - -0.605
+    - 0.6
+    y:
+    - -0.302686
+    - 0.357493
+    z:
+    - 1.973938
+    - 2.357403
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_12:
+    x:
+    - 0.467163
+    - 0.563163
+    y:
+    - 0.360985
+    - 0.399985
+    z:
+    - 1.647677
+    - 1.743677
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_13:
+    x:
     - 0.467163
     - 0.563163
     y:
@@ -100,7 +256,7 @@ obstakels:
     bron: cad
     pointcloud: false
     plaatsing_keepout: false
-  cad_frame_03:
+  cad_frame_14:
     x:
     - -0.563163
     - -0.467163
@@ -113,7 +269,7 @@ obstakels:
     bron: cad
     pointcloud: false
     plaatsing_keepout: false
-  cad_frame_04:
+  cad_frame_15:
     x:
     - -0.563163
     - -0.467163
@@ -126,7 +282,7 @@ obstakels:
     bron: cad
     pointcloud: false
     plaatsing_keepout: false
-  cad_frame_05:
+  cad_frame_16:
     x:
     - 0.467163
     - 0.563163
@@ -139,7 +295,7 @@ obstakels:
     bron: cad
     pointcloud: false
     plaatsing_keepout: false
-  cad_frame_06:
+  cad_frame_17:
     x:
     - -0.563163
     - -0.467163
@@ -152,7 +308,7 @@ obstakels:
     bron: cad
     pointcloud: false
     plaatsing_keepout: false
-  cad_frame_07:
+  cad_frame_18:
     x:
     - -0.560319
     - 0.559681
@@ -165,7 +321,7 @@ obstakels:
     bron: cad
     pointcloud: false
     plaatsing_keepout: false
-  cad_frame_08:
+  cad_frame_19:
     x:
     - -0.560319
     - 0.559681

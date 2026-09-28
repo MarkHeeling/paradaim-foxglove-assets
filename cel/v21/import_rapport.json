@@ -222,8 +222,8 @@
     1.970019
    ]
   ],
-  "klasse": "buiten_bereik",
-  "reden": "z_min 1.930 >= 1.9"
+  "klasse": "obstakel",
+  "reden": "bounding box"
  },
  {
   "index": 8,
@@ -252,8 +252,8 @@
     1.982755
    ]
   ],
-  "klasse": "buiten_bereik",
-  "reden": "z_min 1.978 >= 1.9"
+  "klasse": "obstakel",
+  "reden": "bounding box"
  },
  {
   "index": 9,
@@ -282,8 +282,8 @@
     1.990924
    ]
   ],
-  "klasse": "buiten_bereik",
-  "reden": "z_min 1.976 >= 1.9"
+  "klasse": "obstakel",
+  "reden": "bounding box"
  },
  {
   "index": 10,
@@ -312,8 +312,8 @@
     1.985231
    ]
   ],
-  "klasse": "buiten_bereik",
-  "reden": "z_min 1.976 >= 1.9"
+  "klasse": "obstakel",
+  "reden": "bounding box"
  },
  {
   "index": 11,
@@ -342,8 +342,8 @@
     1.990924
    ]
   ],
-  "klasse": "buiten_bereik",
-  "reden": "z_min 1.976 >= 1.9"
+  "klasse": "obstakel",
+  "reden": "bounding box"
  },
  {
   "index": 12,
@@ -372,8 +372,8 @@
     1.985231
    ]
   ],
-  "klasse": "buiten_bereik",
-  "reden": "z_min 1.976 >= 1.9"
+  "klasse": "obstakel",
+  "reden": "bounding box"
  },
  {
   "index": 13,
@@ -402,8 +402,8 @@
     1.982755
    ]
   ],
-  "klasse": "buiten_bereik",
-  "reden": "z_min 1.978 >= 1.9"
+  "klasse": "obstakel",
+  "reden": "bounding box"
  },
  {
   "index": 14,
@@ -432,8 +432,8 @@
     1.985231
    ]
   ],
-  "klasse": "buiten_bereik",
-  "reden": "z_min 1.976 >= 1.9"
+  "klasse": "obstakel",
+  "reden": "bounding box"
  },
  {
   "index": 15,
@@ -462,8 +462,8 @@
     1.990924
    ]
   ],
-  "klasse": "buiten_bereik",
-  "reden": "z_min 1.976 >= 1.9"
+  "klasse": "obstakel",
+  "reden": "bounding box"
  },
  {
   "index": 16,
@@ -492,8 +492,8 @@
     1.982755
    ]
   ],
-  "klasse": "buiten_bereik",
-  "reden": "z_min 1.978 >= 1.9"
+  "klasse": "obstakel",
+  "reden": "bounding box"
  },
  {
   "index": 17,
@@ -522,8 +522,8 @@
     2.357403
    ]
   ],
-  "klasse": "buiten_bereik",
-  "reden": "z_min 1.974 >= 1.9"
+  "klasse": "obstakel",
+  "reden": "dunne constructie boven de camera's (z 1,974-2,357 m, vulling 0,01): als \u00e9\u00e9n doos, want de robot hoort daar niet te komen en alles erboven is geen werkruimte; de onderkant (1,974) is wat telt en die ligt ruim boven de camera-stayout (1,529-1,609)"
  },
  {
   "index": 18,

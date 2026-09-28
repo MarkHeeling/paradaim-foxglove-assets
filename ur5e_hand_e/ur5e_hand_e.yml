@@ -135,12 +135,12 @@ robot_cfg:
       - wrist_1_joint
       - wrist_2_joint
       - wrist_3_joint
-      # thuishouding uit robot.xrdf (pan = pi: robot "over de schouder")
+      # thuishouding v3 uit ur5e_hand_e.xrdf (28-09-2026, linksachter geparkeerd)
       default_joint_position:
-      - 3.14159265
-      - -1.04719755
-      - 1.39626340
-      - -1.91986218
+      - 1.57079633
+      - -1.22173048
+      - 2.18166156
+      - -0.95993109
       - -1.57079633
       - 0.0
       max_acceleration: 10.0
