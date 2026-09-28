@@ -2,8 +2,8 @@
 # door scripts/xrdf_to_curobo.py -- niet met de hand bewerken.
 format: xrdf
 format_version: 1.0
-default_joint_positions: {shoulder_pan_joint: 1.57079633, shoulder_lift_joint: -1.22173048,
-  elbow_joint: 2.18166156, wrist_1_joint: -0.95993109, wrist_2_joint: -1.57079633,
+default_joint_positions: {shoulder_pan_joint: 1.57079633, shoulder_lift_joint: -1.57079633,
+  elbow_joint: 2.18166156, wrist_1_joint: -2.18166156, wrist_2_joint: -1.57079633,
   wrist_3_joint: 0.0}
 cspace:
   joint_names: [shoulder_pan_joint, shoulder_lift_joint, elbow_joint, wrist_1_joint,
@@ -123,3 +123,9 @@ geometry:
         radius: 0.016
       - center: [-0.022, 0.0, 0.158]
         radius: 0.016
+      - center: [-0.056, -0.002, 0.013]
+        radius: 0.015
+      - center: [-0.071, -0.002, 0.013]
+        radius: 0.015
+      - center: [-0.084, -0.002, 0.013]
+        radius: 0.015

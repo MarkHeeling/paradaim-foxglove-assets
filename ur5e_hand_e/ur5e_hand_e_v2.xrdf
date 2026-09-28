@@ -1,23 +1,50 @@
-robot_cfg:
-  kinematics:
-    asset_root_path: /home/mheeling/project/ur5e_hand_e
-    urdf_path: /home/mheeling/project/ur5e_hand_e/ur5e_hand_e.urdf
-    base_link: base_link
-    tool_frames:
-    - tool0
-    lock_joints: null
-    collision_sphere_buffer: 0.0
-    collision_link_names:
-    - shoulder_link
-    - upper_arm_link
-    - forearm_link
-    - wrist_1_link
-    - wrist_2_link
-    - wrist_3_link
-    - tool0
-    collision_spheres:
-      # Arm-spheres uit de (deprecated) Lula ur5e_robot_description.yaml,
-      # via robot.xrdf.
+# BEVROREN: de UR5e + Hand-E waarmee v1 en v2 gemaakt zijn (cel v20): thuishouding
+# [180, -60, 80, -110, -90, 0] graden en de bollenset zonder de kabelconnector.
+# Alleen voor de QA van v1/v2 (planner.robot kiest hem bij cel v20), zodat het
+# snapshot en de getallen in het boek blijven kloppen. Niet bewerken; de
+# actuele robot staat in ur5e_hand_e.xrdf (besluit Mark 28-09-2026).
+
+# XRDF voor UR5e + Robotiq Hand-E (paradaim bin-picking cel).
+
+format: xrdf
+format_version: 2.0
+
+default_joint_positions:
+  shoulder_pan_joint: 3.14159265
+  shoulder_lift_joint: -1.04719755
+  elbow_joint: 1.39626340
+  wrist_1_joint: -1.91986218
+  wrist_2_joint: -1.57079633
+  wrist_3_joint: 0.0
+
+cspace:
+  joint_names:
+    - "shoulder_pan_joint"
+    - "shoulder_lift_joint"
+    - "elbow_joint"
+    - "wrist_1_joint"
+    - "wrist_2_joint"
+    - "wrist_3_joint"
+  acceleration_limits: [10.0, 10.0, 10.0, 10.0, 10.0, 10.0]
+  jerk_limits: [500.0, 500.0, 500.0, 500.0, 500.0, 500.0]
+
+tool_frames: ["tool0"]
+
+world_collision:
+  geometry: "ur5e_collision_spheres"
+
+self_collision:
+  geometry: "ur5e_self_collision_spheres"
+  ignore:
+    shoulder_link: ["upper_arm_link"]
+    upper_arm_link: ["forearm_link"]
+    forearm_link: ["wrist_1_link"]
+    wrist_1_link: ["wrist_2_link"]
+    wrist_2_link: ["wrist_3_link"]
+
+geometry:
+  ur5e_collision_spheres:
+    spheres:
       shoulder_link:
         - center: [-0.006, -0.012, 0.027]
           radius: 0.059
@@ -113,7 +140,10 @@ robot_cfg:
         # vingerbasis
         - center: [0.0, 0.0, 0.12]
           radius: 0.032
-        # vingers t/m de tips
+        # vingers t/m de tips (toegevoegd 2026-07-07: de tips staken ~5 mm in
+        # obstakels; zie exts/paradaim.motion_panel. Grijpen blijft planbaar:
+        # planner-doelen zijn altijd pregrasp/thuis en de kubus staat tijdens
+        # de (planner-vrije) daling als obstakel uit. Vingerslag-as = ±X_w3.)
         - center: [0.022, 0.0, 0.14]
           radius: 0.02
         - center: [-0.022, 0.0, 0.14]
@@ -122,83 +152,5 @@ robot_cfg:
           radius: 0.016
         - center: [-0.022, 0.0, 0.158]
           radius: 0.016
-      tool0:
-        # negatieve radius = sphere uitgeschakeld (cuRobo-conventie); de
-        # gripper zit al in de wrist_3-spheres hierboven.
-        - center: [0.0, 0.0, 0.0]
-          radius: -0.01
-    cspace:
-      joint_names:
-      - shoulder_pan_joint
-      - shoulder_lift_joint
-      - elbow_joint
-      - wrist_1_joint
-      - wrist_2_joint
-      - wrist_3_joint
-      # thuishouding v3 uit ur5e_hand_e.xrdf (28-09-2026, boven de parkeerplek)
-      default_joint_position:
-      - 1.57079633
-      - -1.57079633
-      - 2.18166156
-      - -2.18166156
-      - -1.57079633
-      - 0.0
-      max_acceleration: 10.0
-      max_jerk: 500.0
-      cspace_distance_weight:
-      - 1.0
-      - 1.0
-      - 1.0
-      - 1.0
-      - 1.0
-      - 1.0
-      null_space_weight:
-      - 1.0
-      - 1.0
-      - 1.0
-      - 1.0
-      - 1.0
-      - 1.0
-      # Wordt van beide kanten van de URDF-limiet afgetrokken. De URDF geeft
-      # +/-2pi op alles behalve elbow (+/-pi); dat is mechanisch correct voor een
-      # UR5e, maar met de Hand-E en de wrist-camera aan boord wil je geen
-      # meervoudige omwentelingen omdat de kabels dan opwikkelen. Onderstaande
-      # clip houdt elk gewricht op +/-3.2416 rad (+/-185.7 graden), elbow op
-      # +/-3.0416 rad (+/-174.3 graden).
-      #
-      # Waarom nét boven de 180 graden: de thuishouding heeft pan = pi. Bij een
-      # limiet van exact +/-pi ligt die houding op de rand, waar de optimizer
-      # slecht mee omgaat. De 0.1 rad extra is die marge.
-      #
-      # Volgorde: pan, lift, elbow, wrist_1, wrist_2, wrist_3.
-      position_limit_clip: [3.0416, 3.0416, 0.1, 3.0416, 3.0416, 3.0416]
-    mesh_link_names:
-    - shoulder_link
-    - upper_arm_link
-    - forearm_link
-    - wrist_1_link
-    - wrist_2_link
-    - wrist_3_link
-    self_collision_buffer:
-      shoulder_link: 0.0
-      upper_arm_link: 0.0
-      forearm_link: 0.0
-      wrist_1_link: 0.0
-      wrist_2_link: 0.0
-      wrist_3_link: 0.0
-      tool0: 0.0
-    self_collision_ignore:
-      shoulder_link:
-      - upper_arm_link
-      upper_arm_link:
-      - forearm_link
-      forearm_link:
-      - wrist_1_link
-      wrist_1_link:
-      - wrist_2_link
-      - wrist_3_link
-      wrist_2_link:
-      - wrist_3_link
-      - tool0
-      wrist_3_link:
-      - tool0
+  ur5e_self_collision_spheres:
+    clone: ["ur5e_collision_spheres"]

@@ -3,15 +3,17 @@
 format: xrdf
 format_version: 2.0
 
-# Thuishouding v3 (besluit 28-09-2026): [90, -70, 125, -55, -90, 0] graden,
-# opgevouwen linksachter boven de parkeerplek van cel v21, buiten het beeld
-# van de camera's. v1/v2 zijn gemaakt met [180, -60, 80, -110, -90, 0] graden;
-# die staat per episode als q_start in de data.
+# Thuishouding v3 (besluit Mark 28-09-2026, avond): [90, -90, 125, -125, -90, 0]
+# graden. Bovenarm verticaal, onderarm teruggevouwen, grijper recht omlaag
+# boven de parkeerplek van cel v21, buiten het beeld van de camera's
+# (scripts/thuishouding_controle.py). Vervangt [90, -70, 125, -55, -90, 0] van
+# dezelfde middag. v1/v2 zijn gemaakt met [180, -60, 80, -110, -90, 0] graden
+# (ur5e_hand_e_v2.xrdf); die staat per episode als q_start in de data.
 default_joint_positions:
   shoulder_pan_joint: 1.57079633
-  shoulder_lift_joint: -1.22173048
+  shoulder_lift_joint: -1.57079633
   elbow_joint: 2.18166156
-  wrist_1_joint: -0.95993109
+  wrist_1_joint: -2.18166156
   wrist_2_joint: -1.57079633
   wrist_3_joint: 0.0
 
@@ -150,5 +152,16 @@ geometry:
           radius: 0.016
         - center: [-0.022, 0.0, 0.158]
           radius: 0.016
+        # kabelconnector van de Hand-E (toegevoegd 2026-09-28, besluit Mark):
+        # staafje van x = -0,045 tot -0,096 in tool0 (= wrist_3_link), doorsnede
+        # ~25 x 16 mm op z 0,005-0,021; gemeten op assets/cel/hand_e.glb, drie
+        # bollen dekken hem helemaal (test_xrdf). Alleen voor v3; v1/v2 houden
+        # ur5e_hand_e_v2.xrdf. De kabel zelf (slap) zit er niet in.
+        - center: [-0.056, -0.002, 0.013]
+          radius: 0.015
+        - center: [-0.071, -0.002, 0.013]
+          radius: 0.015
+        - center: [-0.084, -0.002, 0.013]
+          radius: 0.015
   ur5e_self_collision_spheres:
     clone: ["ur5e_collision_spheres"]
