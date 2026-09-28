@@ -1,0 +1,58 @@
+# Bron voor cel v21: met de hand. scripts/cel_import.py leest dit en de STEP
+# en schrijft cel.yaml. Frame: celframe (m), tenzij er _mm staat (STEP-frame).
+cel_id: v21
+step: frame_construction_80x120_v21.STEP
+sha256: aa3fef4e5cec251c82db8391b7fa696c6fe189065bf6b595d748392cabc68359
+# STEP: mm, z = 0 op de bovenkant van het blad (gecontroleerd: het blad loopt
+# van z -20 tot 0, 1200 x 800 mm). Celframe: m, blad-top op 0,750.
+step_naar_cel: {schaal: 0.001, translatie: [0.0, 0.0, 0.750]}
+basis:
+  xyz: [0.0, 0.46328, 0.770]
+  yaw: 1.5707963267948966
+werkblad:
+  top_z: 0.750
+  dikte: 0.02
+  x: [-0.60, 0.60]
+  y: [-0.40, 0.40]
+plaatsingszone:
+  x: [-0.54, 0.54]
+  y: [-0.36, 0.36]
+basisplaat_product: cobot base plate
+robotvoet_reden: "UR5e-voet in de CAD"
+# Boven deze hoogte (celframe) komt de robot niet: basis 0,770 + bereik 0,85 +
+# gereedschap 0,16 = 1,78; met marge 1,90.
+z_max: 1.90
+# Een doos groter dan dit met een vulling onder vulling_min vraagt een besluit.
+grote_doos_m3: 0.002
+vulling_min: 0.3
+bbox_tol_mm: 2.0
+# Keep-outs die niet in de CAD staan, of die een hele constructie omvatten.
+# Zijwanden: binnenvlak op de binnenkant van de hoekbeugels (x = ±0,5553 in de
+# CAD), zodat profielen, zijpanelen, plexiplaten en klemmen erin vallen; y tot
+# achter de zijpanelen (0,8003). Voorwand en achterdoek staan niet in de CAD
+# en blijven zoals in v20.
+virtueel:
+  cell_side_xmin:    {x: [-0.61, -0.555], y: [-0.46, 0.81], z: [0.73, 2.05]}
+  cell_side_xmax:    {x: [0.555, 0.61],   y: [-0.46, 0.81], z: [0.73, 2.05]}
+  cell_front:        {x: [-0.61, 0.61],   y: [-0.46, -0.41], z: [0.73, 2.05]}
+  cell_back_curtain: {x: [-0.61, 0.61],   y: [0.575, 0.63], z: [0.73, 2.05]}
+# De UR5e met Hand-E is in de CAD meegetekend, in een willekeurige stand. Die
+# hoort niet in de botsingswereld (de robot zou met zichzelf botsen).
+uitsluiten:
+  - {bbox_mm: [-75.5, 75.5, 386.871, 537.87, 20.0, 119.1], reden: "UR5e-voet in de CAD"}
+  - {bbox_mm: [-74.4, 60.1, 402.271, 522.471, 119.1, 254.543], reden: "UR5e-schouder in de CAD"}
+  - {bbox_mm: [-209.843, -74.4, 222.658, 522.471, 122.4, 627.781], reden: "UR5e-bovenarm in de CAD"}
+  - {bbox_mm: [-74.4, 49.448, -77.905, 340.758, 303.346, 625.681], reden: "UR5e-onderarm in de CAD"}
+  - {bbox_mm: [-172.65, -52.9, -84.855, 17.475, 303.346, 382.046], reden: "UR5e-pols 1 in de CAD"}
+  - {bbox_mm: [-172.65, -93.95, -177.605, -84.855, 296.396, 398.726], reden: "UR5e-pols 2/3 in de CAD"}
+  - {bbox_mm: [-170.8, -95.8, -92.705, -85.105, 305.196, 380.196], reden: "UR5e-flensring in de CAD"}
+  - {bbox_mm: [-170.8, -95.8, -182.355, -100.755, 243.096, 296.396], reden: "Hand-E in de CAD"}
+lage_vulling_als_doos: []
+# Korte namen voor de obstakels in cel.yaml (cad_<naam>_<nr>).
+productnamen:
+  "frame construction 80x120 full table v20": frame
+  "cobot base plate": basisplaat
+  "camera stayout": camera_stayout
+  "bracket": bracket
+pointcloud_producten: [cobot base plate, bracket]
+keepout_producten: [cobot base plate, bracket]

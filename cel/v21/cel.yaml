@@ -1,0 +1,232 @@
+# GEGENEREERD door scripts/cel_import.py uit frame_construction_80x120_v21.STEP en bron.yaml;
+# niet met de hand bewerken. Frame: celframe, m, dozen als (min, max) per as.
+cel_id: v21
+bron:
+  type: cad
+  step: frame_construction_80x120_v21.STEP
+  sha256: aa3fef4e5cec251c82db8391b7fa696c6fe189065bf6b595d748392cabc68359
+  generator: scripts/cel_import.py
+  bron_yaml: bron.yaml
+basis:
+  xyz:
+  - 0.0
+  - 0.46328
+  - 0.77
+  yaw: 1.5707963267948966
+werkblad:
+  top_z: 0.75
+  dikte: 0.02
+  x:
+  - -0.6
+  - 0.6
+  y:
+  - -0.4
+  - 0.4
+plaatsingszone:
+  x:
+  - -0.54
+  - 0.54
+  y:
+  - -0.36
+  - 0.36
+obstakels:
+  cell_side_xmin:
+    x:
+    - -0.61
+    - -0.555
+    y:
+    - -0.46
+    - 0.81
+    z:
+    - 0.73
+    - 2.05
+    bron: virtueel
+  cell_side_xmax:
+    x:
+    - 0.555
+    - 0.61
+    y:
+    - -0.46
+    - 0.81
+    z:
+    - 0.73
+    - 2.05
+    bron: virtueel
+  cell_front:
+    x:
+    - -0.61
+    - 0.61
+    y:
+    - -0.46
+    - -0.41
+    z:
+    - 0.73
+    - 2.05
+    bron: virtueel
+  cell_back_curtain:
+    x:
+    - -0.61
+    - 0.61
+    y:
+    - 0.575
+    - 0.63
+    z:
+    - 0.73
+    - 2.05
+    bron: virtueel
+  cad_frame_01:
+    x:
+    - 0.467163
+    - 0.563163
+    y:
+    - 0.360985
+    - 0.399985
+    z:
+    - 1.647677
+    - 1.743677
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_02:
+    x:
+    - 0.467163
+    - 0.563163
+    y:
+    - -0.399985
+    - -0.360985
+    z:
+    - 1.647677
+    - 1.743677
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_03:
+    x:
+    - -0.563163
+    - -0.467163
+    y:
+    - 0.360985
+    - 0.399985
+    z:
+    - 1.647677
+    - 1.743677
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_04:
+    x:
+    - -0.563163
+    - -0.467163
+    y:
+    - -0.399985
+    - -0.360985
+    z:
+    - 1.647677
+    - 1.743677
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_05:
+    x:
+    - 0.467163
+    - 0.563163
+    y:
+    - -0.112986
+    - -0.016986
+    z:
+    - 1.610678
+    - 1.649678
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_06:
+    x:
+    - -0.563163
+    - -0.467163
+    y:
+    - -0.112986
+    - -0.016986
+    z:
+    - 1.610678
+    - 1.649678
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_07:
+    x:
+    - -0.560319
+    - 0.559681
+    y:
+    - -0.400444
+    - -0.360444
+    z:
+    - 1.609477
+    - 1.649477
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_frame_08:
+    x:
+    - -0.560319
+    - 0.559681
+    y:
+    - -0.02
+    - 0.02
+    z:
+    - 1.610019
+    - 1.650019
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_basisplaat_01:
+    x:
+    - -0.1
+    - 0.1
+    y:
+    - 0.25
+    - 0.555
+    z:
+    - 0.75
+    - 0.79
+    bron: cad
+    pointcloud: true
+    plaatsing_keepout: true
+  cad_camera_stayout_01:
+    x:
+    - -0.559887
+    - 0.560113
+    y:
+    - -0.4
+    - 0.4
+    z:
+    - 1.52938
+    - 1.60938
+    bron: cad
+    pointcloud: false
+    plaatsing_keepout: false
+  cad_bracket_01:
+    x:
+    - -0.559887
+    - -0.459887
+    y:
+    - -0.4
+    - -0.35
+    z:
+    - 0.75
+    - 0.8
+    bron: cad
+    pointcloud: true
+    plaatsing_keepout: true
+  cad_bracket_02:
+    x:
+    - 0.459887
+    - 0.559887
+    y:
+    - -0.4
+    - -0.35
+    z:
+    - 0.75
+    - 0.8
+    bron: cad
+    pointcloud: true
+    plaatsing_keepout: true
