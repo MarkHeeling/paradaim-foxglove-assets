@@ -163,5 +163,21 @@ geometry:
           radius: 0.015
         - center: [-0.084, -0.002, 0.013]
           radius: 0.015
+        # behuizing van de Hand-E (toegevoegd 2026-09-28, besluit Mark): de
+        # behuizing staat in tool0 (= wrist_3_link) niet op de as maar op
+        # x -0,045..0,030, y -0,040..0,048 (bult aan +y onderin), z 0..0,1185;
+        # de bollen hierboven (op x = 0) lieten tot 11,3 mm vrij (p99 3,7 mm,
+        # krapst rond [-0.043, -0.013, 0.115]). Drie bollen dekken nu elk punt
+        # van assets/cel/hand_e.glb binnen 1 mm (max 0,95 mm; test_xrdf):
+        # twee onderin (flens-ring + de bult aan +y), één om de bovenkant.
+        # Gekozen als het kleinste aantal waarbij een bol extra < 1 mm scheelt;
+        # ze steken hooguit 6,9 mm buiten de behuizing en de oude bollen uit.
+        # Alleen voor v3; v1/v2 houden ur5e_hand_e_v2.xrdf.
+        - center: [-0.006, -0.002, 0.022]
+          radius: 0.044
+        - center: [-0.007, 0.013, 0.015]
+          radius: 0.038
+        - center: [-0.007, -0.001, 0.098]
+          radius: 0.041
   ur5e_self_collision_spheres:
     clone: ["ur5e_collision_spheres"]
