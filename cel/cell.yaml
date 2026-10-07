@@ -1,0 +1,440 @@
+# De vaste robotcel v21 (planner.cell). Oorspronkelijk gegenereerd uit
+# frame_construction_80x120_v21.STEP; de celimport is bij het inkrimpen
+# weggehaald (tag voor-inkrimpen), dus dit bestand wordt nu met de hand
+# beheerd. Frame: celframe, m, dozen als (min, max) per as.
+cell_id: v21
+source:
+  type: cad
+  step: frame_construction_80x120_v21.STEP
+  sha256: aa3fef4e5cec251c82db8391b7fa696c6fe189065bf6b595d748392cabc68359
+base:
+  xyz:
+  - 0.0
+  - 0.46328
+  - 0.77
+  yaw: 1.5707963267948966
+worktop:
+  top_z: 0.75
+  thickness: 0.02
+  x:
+  - -0.6
+  - 0.6
+  y:
+  - -0.4
+  - 0.4
+placement_zone:
+  x:
+  - -0.54
+  - 0.54
+  y:
+  - -0.36
+  - 0.36
+obstacles:
+  cell_side_xmin:
+    x:
+    - -0.61
+    - -0.555
+    y:
+    - -0.46
+    - 0.81
+    z:
+    - 0.73
+    - 2.05
+    source: virtual
+  cell_side_xmax:
+    x:
+    - 0.555
+    - 0.61
+    y:
+    - -0.46
+    - 0.81
+    z:
+    - 0.73
+    - 2.05
+    source: virtual
+  cell_front:
+    x:
+    - -0.61
+    - 0.61
+    y:
+    - -0.46
+    - -0.41
+    z:
+    - 0.73
+    - 2.05
+    source: virtual
+  cell_back_curtain:
+    x:
+    - -0.61
+    - 0.61
+    y:
+    - 0.575
+    - 0.63
+    z:
+    - 0.73
+    - 2.05
+    source: virtual
+  parking:
+    x:
+    - -0.54
+    - 0.2
+    y:
+    - 0.2
+    - 0.36
+    z:
+    - 0.75
+    - 1.52938
+    source: virtual
+    placement_keepout: true
+    in_world: false
+  cad_frame_01:
+    x:
+    - -0.560319
+    - 0.559681
+    y:
+    - 0.36
+    - 0.4
+    z:
+    - 1.930019
+    - 1.970019
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_02:
+    x:
+    - -0.029375
+    - 0.021425
+    y:
+    - 0.362721
+    - 0.367471
+    z:
+    - 1.978005
+    - 1.982755
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_03:
+    x:
+    - 0.370625
+    - 0.421425
+    y:
+    - 0.340673
+    - 0.369947
+    z:
+    - 1.975528
+    - 1.990924
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_04:
+    x:
+    - -0.429375
+    - -0.378575
+    y:
+    - 0.360244
+    - 0.390496
+    z:
+    - 1.975528
+    - 1.985231
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_05:
+    x:
+    - -0.029375
+    - 0.021425
+    y:
+    - 0.340673
+    - 0.369947
+    z:
+    - 1.975528
+    - 1.990924
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_06:
+    x:
+    - 0.370625
+    - 0.421425
+    y:
+    - 0.360244
+    - 0.390496
+    z:
+    - 1.975528
+    - 1.985231
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_07:
+    x:
+    - 0.370625
+    - 0.421425
+    y:
+    - 0.362721
+    - 0.367471
+    z:
+    - 1.978005
+    - 1.982755
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_08:
+    x:
+    - -0.029375
+    - 0.021425
+    y:
+    - 0.360244
+    - 0.390496
+    z:
+    - 1.975528
+    - 1.985231
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_09:
+    x:
+    - -0.429375
+    - -0.378575
+    y:
+    - 0.340673
+    - 0.369947
+    z:
+    - 1.975528
+    - 1.990924
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_10:
+    x:
+    - -0.429375
+    - -0.378575
+    y:
+    - 0.362721
+    - 0.367471
+    z:
+    - 1.978005
+    - 1.982755
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_11:
+    x:
+    - -0.605
+    - 0.6
+    y:
+    - -0.302686
+    - 0.357493
+    z:
+    - 1.973938
+    - 2.357403
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_12:
+    x:
+    - 0.467163
+    - 0.563163
+    y:
+    - 0.360985
+    - 0.399985
+    z:
+    - 1.647677
+    - 1.743677
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_13:
+    x:
+    - 0.467163
+    - 0.563163
+    y:
+    - -0.399985
+    - -0.360985
+    z:
+    - 1.647677
+    - 1.743677
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_14:
+    x:
+    - -0.563163
+    - -0.467163
+    y:
+    - 0.360985
+    - 0.399985
+    z:
+    - 1.647677
+    - 1.743677
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_15:
+    x:
+    - -0.563163
+    - -0.467163
+    y:
+    - -0.399985
+    - -0.360985
+    z:
+    - 1.647677
+    - 1.743677
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_16:
+    x:
+    - 0.467163
+    - 0.563163
+    y:
+    - -0.112986
+    - -0.016986
+    z:
+    - 1.610678
+    - 1.649678
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_17:
+    x:
+    - -0.563163
+    - -0.467163
+    y:
+    - -0.112986
+    - -0.016986
+    z:
+    - 1.610678
+    - 1.649678
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_18:
+    x:
+    - -0.560319
+    - 0.559681
+    y:
+    - -0.400444
+    - -0.360444
+    z:
+    - 1.609477
+    - 1.649477
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_frame_19:
+    x:
+    - -0.560319
+    - 0.559681
+    y:
+    - -0.02
+    - 0.02
+    z:
+    - 1.610019
+    - 1.650019
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_base_plate_01:
+    x:
+    - -0.1
+    - 0.1
+    y:
+    - 0.25
+    - 0.555
+    z:
+    - 0.75
+    - 0.77
+    source: cad
+    pointcloud: true
+    placement_keepout: true
+  cad_base_plate_02:
+    x:
+    - -0.08625
+    - -0.06375
+    y:
+    - 0.36375
+    - 0.38625
+    z:
+    - 0.77
+    - 0.79
+    source: cad
+    pointcloud: true
+    placement_keepout: true
+  cad_base_plate_03:
+    x:
+    - -0.03625
+    - -0.01375
+    y:
+    - 0.26375
+    - 0.28625
+    z:
+    - 0.77
+    - 0.79
+    source: cad
+    pointcloud: true
+    placement_keepout: true
+  cad_base_plate_04:
+    x:
+    - 0.01375
+    - 0.03625
+    y:
+    - 0.26375
+    - 0.28625
+    z:
+    - 0.77
+    - 0.79
+    source: cad
+    pointcloud: true
+    placement_keepout: true
+  cad_base_plate_05:
+    x:
+    - 0.06375
+    - 0.08625
+    y:
+    - 0.36375
+    - 0.38625
+    z:
+    - 0.77
+    - 0.79
+    source: cad
+    pointcloud: true
+    placement_keepout: true
+  cad_camera_stayout_01:
+    x:
+    - -0.559887
+    - 0.560113
+    y:
+    - -0.4
+    - 0.4
+    z:
+    - 1.52938
+    - 1.60938
+    source: cad
+    pointcloud: false
+    placement_keepout: false
+  cad_bracket_01:
+    x:
+    - -0.559887
+    - -0.459887
+    y:
+    - -0.4
+    - -0.35
+    z:
+    - 0.75
+    - 0.8
+    source: cad
+    pointcloud: true
+    placement_keepout: true
+  cad_bracket_02:
+    x:
+    - 0.459887
+    - 0.559887
+    y:
+    - -0.4
+    - -0.35
+    z:
+    - 0.75
+    - 0.8
+    source: cad
+    pointcloud: true
+    placement_keepout: true
