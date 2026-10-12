@@ -22,6 +22,22 @@ worktop:
   y:
   - -0.4
   - 0.4
+  # Het gatenraster van het echte blad (tafel_met_gaten, Mark 12-10-2026):
+  # 24 x 16 gaten, steek 50 mm, middens van x = -0,575 tot 0,575 en van
+  # y = -0,375 tot 0,375 (celframe). Doorgang 16 mm, aan de bovenkant
+  # verzonken tot 22 mm. In de botsingswereld blijft het blad een doos: elk
+  # gat is kleiner dan de kleinste robotbol en de planner stopt met de
+  # penpunt boven het gat (planner.data.attached, plaatsdoelen).
+  holes:
+    diameter: 0.016
+    countersink_diameter: 0.022
+    pitch: 0.05
+    x:
+    - -0.575
+    - 0.575
+    y:
+    - -0.375
+    - 0.375
 placement_zone:
   x:
   - -0.54
