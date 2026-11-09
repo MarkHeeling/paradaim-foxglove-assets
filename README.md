@@ -15,4 +15,4 @@ De UR5e-meshes komen uit `ur_description` van Universal Robots
 (ros-industrial/universal_robot, BSD-3-Clause); de Hand-E-gripper zit
 niet in de URDF.
 
-**Bedieningspaneel:** download `panel/paradaim.paradaim-panel-1.9.0.foxe`, open het met de Foxglove-app (dubbelklik) en voeg het panel "Paradaim Bediening" (Isaac) of "URSim Bediening" (URSim, via `ws://10.8.0.1:8765`, of de dataset via `ws://10.8.0.1:8770`) toe aan je layout.
+**Extensie:** download `panel/paradaim.paradaim-panel-2.0.0.foxe` en open het met de Foxglove-app (dubbelklik). Laad daarna de layout `configs/foxglove/paradaim_layout.json` uit planner (Layout → Import from file): die werkt voor een opname (`.mcap`), de datasetserver (`ws://10.8.0.1:8770`) en URSim of de robot (`ws://10.8.0.1:8765`). Het panel "Paradaim Bediening" is voor Isaac.
