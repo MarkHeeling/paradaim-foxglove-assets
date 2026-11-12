@@ -15,4 +15,4 @@ De UR5e-meshes komen uit `ur_description` van Universal Robots
 (ros-industrial/universal_robot, BSD-3-Clause); de Robotiq Hand-E staat
 erin als de glb's uit `cel/` (behuizing en twee vingers).
 
-**Extensie:** download `panel/paradaim.paradaim-panel-2.3.0.foxe` en open het met de Foxglove-app (dubbelklik). Laad daarna de layout `configs/foxglove/paradaim_layout.json` uit planner (Layout → Import from file): die werkt voor een opname (`.mcap`), de datasetserver (`ws://10.8.0.1:8770`) en URSim of de robot (`ws://10.8.0.1:8765`). Het panel "Paradaim Bediening" is voor Isaac.
+**Extensie:** download `panel/paradaim.paradaim-panel-2.5.0.foxe` en open het met de Foxglove-app (dubbelklik). Laad daarna een layout uit `configs/foxglove/` van planner (Layout → Import from file; `paradaim_layout.json` met alle instrumenten of `paradaim_vrij.json`, elk ook als `_groot` voor een groot scherm): die werkt voor een opname (`.mcap`), de datasetserver (`ws://10.8.0.1:8770`) en URSim of de robot (`ws://10.8.0.1:8765`). Het panel "Paradaim Bediening" is voor Isaac.
