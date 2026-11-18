@@ -103,6 +103,21 @@ obstacles:
     source: virtual
     placement_keepout: true
     in_world: false
+    robot: ur5e_hand_e
+  parking_v6:
+    x:
+    - -0.2
+    - 0.54
+    y:
+    - 0.2
+    - 0.36
+    z:
+    - 0.75
+    - 1.52938
+    source: virtual
+    placement_keepout: true
+    in_world: false
+    robot: ur5e_hand_e_v6
   cad_frame_01:
     x:
     - -0.560319
